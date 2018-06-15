@@ -1,9 +1,16 @@
+@if (Auth::check())
+<div class="text-center">
+    <h3>{{ Auth::user()->name }}</h3>
+    <hr> 
+</div>
+@endif
+
 <ul class="nav justify-content-center">
     <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/posts/manage">All Post</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/">Blog</a>
+        <a class="nav-link" href="/posts/create">Create Posts</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">Portfolio</a>
@@ -18,6 +25,6 @@
         <a href="/login" class="nav-link">Login</a>
     </li>
     <li class="nav-item">
-        <a href="/logout" class="nav-link">Logout</a>
+        <a class="nav-link" href="/logout">Logout</a>
     </li>
 </ul>

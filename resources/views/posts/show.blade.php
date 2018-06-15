@@ -1,4 +1,4 @@
-@extends('templates.master')
+@extends('layouts.master')
 
 @section('content')
 <div class="blog-post">

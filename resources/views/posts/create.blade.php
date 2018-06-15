@@ -1,4 +1,7 @@
-@extends('templates.master') @section('content')
+@extends('layouts.dashboard')
+
+@section('content')
+<div class="container">
 <form method="POST" action="/posts">
     @csrf
     <div class="form-group">
@@ -23,6 +26,6 @@
     @include('partials.error')
 
 </form>
-
+</div>
 
 @endsection

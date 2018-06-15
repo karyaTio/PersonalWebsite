@@ -7,6 +7,9 @@ use App\Post;
 
 class PostController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except(['index', 'show']);
+    }
     public function index(){
 
         $posts = Post::orderBy('created_at', 'desc')->get();
@@ -15,6 +18,7 @@ class PostController extends Controller
     }
 
     public function create(){
+
         return view('posts.create');
     }
 
@@ -29,20 +33,48 @@ class PostController extends Controller
         Post::create([
             'title' => $request->post('title'),
             'slug' => $request->post('slug'),
-            'body' => $request->post('body')
+            'body' => $request->post('body'),
+            'user_id' => auth()->user()->id
         ]);        
 
-        return redirect('/');
+        return redirect('/posts/manage');
     }
 
     public function show($slug){
 
         $post = Post::where('slug', '=', $slug)->firstOrFail();
 
-
-
         return view('posts.show', compact('post'));
     }
 
+    public function edit($id){
+        $post = Post::find($id);
 
+        return view('posts.edit', compact('post'));
+    }
+
+    public function update(Request $request, $id){
+        $this->validate($request, [
+            'title' => 'required', 
+            'slug' => 'required',
+            'body' => 'required'
+        ]);
+
+        $post = Post::find($id);
+
+        $post->title = $request->post('title');
+        $post->slug = $request->post('slug');
+        $post->body = $request->post('body');
+
+        $post->save();
+
+        return redirect('/posts/manage');
+    }
+
+    public function manage(){
+
+        $posts = Post::all();
+
+        return view('posts.manage', compact('posts'));
+    }
 }
