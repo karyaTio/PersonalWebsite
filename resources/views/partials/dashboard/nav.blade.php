@@ -1,7 +1,7 @@
 @if (Auth::check())
 <div class="text-center">
     <h3>{{ Auth::user()->name }}</h3>
-    <hr> 
+    <hr>
 </div>
 @endif
 
@@ -18,13 +18,11 @@
     <li class="nav-item">
         <a class="nav-link" href="#">Contact Me</a>
     </li>
-    <li class="nav-item">
-        <a href="/register" class="nav-link">Register</a>
-    </li>
-    <li class="nav-item">
-        <a href="/login" class="nav-link">Login</a>
-    </li>
+
+    {{-- IF Auth --}}
+    @if (Auth::check())
     <li class="nav-item">
         <a class="nav-link" href="/logout">Logout</a>
     </li>
+    @endif
 </ul>

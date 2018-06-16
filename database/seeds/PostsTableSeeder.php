@@ -19,6 +19,7 @@ class PostsTableSeeder extends Seeder
             App\Post::create([
                 'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'slug' => $faker->slug,
+                'user_id' => 1,
                 'body' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null)
             ]);

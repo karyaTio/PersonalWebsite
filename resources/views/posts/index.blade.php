@@ -1,8 +1,6 @@
 @extends('layouts.master') @section('content')
-<div class="container">
-    <hr>
     @foreach ($posts as $post)
-
+    <hr>
     <div class="blog-post">
         <h2 class="blog-post-title">
             <a href="/posts/{{ $post->slug }}">{{ $post->title }}</a>
@@ -11,6 +9,5 @@
 
         {{ $post->body }}
     </div>
-</div>
-
-@endforeach @endsection
+    @endforeach
+ @endsection
