@@ -1,4 +1,4 @@
-@extends('layouts.master') @section('content')
+@extends('layouts.dashboard') @section('content')
 <div class="container my-5">
     <h3 class="text-center">Login</h3>
     <hr>

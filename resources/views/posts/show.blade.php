@@ -5,7 +5,7 @@
         <a href="#">Mark</a>
     </p>
 
-    {{ $post->body }}
+    {!!html_entity_decode($post->body)!!}
 </div>
 <!-- /.blog-post -->
 @endsection

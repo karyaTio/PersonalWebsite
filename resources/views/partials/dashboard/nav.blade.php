@@ -12,12 +12,6 @@
     <li class="nav-item">
         <a class="nav-link" href="/posts/create">Create Posts</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Portfolio</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Contact Me</a>
-    </li>
 
     {{-- IF Auth --}}
     @if (Auth::check())

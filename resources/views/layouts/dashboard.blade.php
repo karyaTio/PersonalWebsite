@@ -9,6 +9,7 @@
     <title>Dashboard</title>
 
     @include('partials.style')
+
 </head>
 
 <body>
@@ -19,6 +20,8 @@
     @include('partials.footer')
 
     @include('partials.script')
+
+    @yield('additionalScript')
 </body>
 
 </html>

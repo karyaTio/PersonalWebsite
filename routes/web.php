@@ -5,6 +5,14 @@ Route::get('/', function(){
     return view('home');
 });
 
+Route::get('/portfolio', function(){
+    return view('portfolio');
+});
+
+Route::get('/about-me', function(){
+    return view('about-me');
+});
+
 // Posts
 Route::get('/posts', 'PostController@index');
 Route::get('/posts/create', 'PostController@create');

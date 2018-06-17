@@ -30,14 +30,13 @@ class PostController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'slug' => 'required',
-            'body' => 'required'
+            'slug' => 'required'
         ]);
 
         Post::create([
             'title' => $request->post('title'),
             'slug' => $request->post('slug'),
-            'body' => $request->post('body'),
+            'body' => $request->post('content'),
             'user_id' => auth()->user()->id
         ]);        
 
