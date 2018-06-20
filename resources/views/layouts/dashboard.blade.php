@@ -8,8 +8,8 @@
 
     <title>Dashboard</title>
 
-    @include('partials.style')
-
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url('css/app.css') }}">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
     @include('partials.footer')
 
-    @include('partials.script')
+    <script src="js/app.js"></script>
 
     @yield('additionalScript')
 </body>

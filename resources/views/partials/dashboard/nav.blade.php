@@ -12,6 +12,9 @@
     <li class="nav-item">
         <a class="nav-link" href="/posts/create">Create Posts</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/" target="_blank">Home Page</a>
+    </li>
 
     {{-- IF Auth --}}
     @if (Auth::check())

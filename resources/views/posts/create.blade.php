@@ -8,11 +8,6 @@
         </div>
 
         <div class="form-group">
-            <label for="slug">Post slug</label>
-            <input type="text" class="form-control" id="slug" name="slug" required>
-        </div>
-
-        <div class="form-group">
             <label for="body">Body</label>
             <textarea name="content" class="form-control my-editor" rows="20"></textarea>
         </div>

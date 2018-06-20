@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('slug')->unique();
+            $table->text('text-thumb');
             $table->string('title');
             $table->text('body');
             $table->timestamps();

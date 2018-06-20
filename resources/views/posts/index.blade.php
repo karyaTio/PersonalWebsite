@@ -7,7 +7,7 @@
         </h2>
         <p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }}</p>
 
-        {!!html_entity_decode($post->body)!!}
+        {!! str_limit(html_entity_decode($post->body), 300)!!}
     </div>
     @endforeach
  @endsection

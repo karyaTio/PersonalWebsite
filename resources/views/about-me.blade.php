@@ -8,7 +8,8 @@
 
     <title>Tio Saputra</title>
 
-    @include('partials.style')
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{{ url('css/app.css') }}">
 </head>
 
 <body>
@@ -74,7 +75,9 @@
         </div>
     </div>
 
-    @include('partials.footer') @include('partials.script')
+    @include('partials.footer')
+    
+    <script src="js/app.js"></script>
 </body>
 
 </html>
