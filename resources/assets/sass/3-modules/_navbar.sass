@@ -1,0 +1,72 @@
+.navbar
+  background-color: $color-primary-2
+
+  .navbar-brand
+    display: block
+    color: $color-secondary-1-1
+    padding: 16px 24px
+    text-decoration: none
+    font-family: $font-stack-0
+    font-size: 1.3em
+    text-align: center
+
+  .navbar-nav
+    list-style-type: none
+    margin: 0
+    padding: 0
+    width: 100%
+    display: none
+
+  .toggleNavbar
+    display: inline
+
+  li a
+    display: block
+    color: $color-secondary-1-0
+    padding: 16px 24px
+    text-decoration: none
+
+    &.active
+      background-color: $color-secondary-1-2
+      color: white
+
+    &:hover:not(.active)
+      background-color: $color-secondary-1-1
+      color: white
+
+  .icon
+    position: absolute
+    right: 0
+    top: 0
+    padding: 16px 24px
+
+    a
+      color: $color-secondary-1-1
+
+
+
+@media screen and (min-width:700px)
+  .navbar
+    height: 50px
+    padding: 20px 0px
+
+    .navbar-brand
+      display: inline-block
+      font-size: 1.3em
+
+    .navbar-nav
+      display: inline-block
+      position: absolute
+      right: 10px
+      width: auto
+      padding: 8px 0px
+
+    li
+      display: inline-block
+
+    li a
+      display: inline-block
+      padding: 8px 16px
+
+    .icon
+      display: none
