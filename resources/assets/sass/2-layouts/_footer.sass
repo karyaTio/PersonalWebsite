@@ -1,0 +1,30 @@
+.footer
+  background-color: $color-primary-4
+  color: $color-secondary-1-1
+
+  .box
+    padding: 40px 20px 10px 20px
+
+.copyright
+  background-color: $color-primary-4
+  color: $color-secondary-1-2
+  padding: 0px 20px
+  border-top: 1px solid $color-secondary-1-2
+  text-align: center
+
+  p
+    margin: 0
+
+@media only screen and (min-width:600px)
+  .footer
+    display: grid
+    grid-template-columns: 1fr 1fr
+    background-color: $color-primary-3
+
+    .box:first-child
+      background-color: $color-secondary-1-1
+      color: $color-primary-4
+
+  .copyright
+    padding: 6px 20px
+    background-color: $color-primary-4

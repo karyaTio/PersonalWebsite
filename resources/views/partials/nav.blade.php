@@ -9,13 +9,10 @@
       <a class="active" href="/">Home</a>
     </li>
     <li>
-      <a href="#what-do-we-do">Work</a>
-    </li>
-    <li>
       <a href="#portfolio">Portfolio</a>
     </li>
     <li>
-      <a href="#contact-me">Contact Me</a>
+      <a href="/posts">Blog</a>
     </li>
   </ul>
 </nav>

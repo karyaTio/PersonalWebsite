@@ -1,5 +1,5 @@
 .navbar
-  background-color: $color-primary-2
+  background-color: $color-primary-4
 
   .navbar-brand
     display: block
@@ -27,12 +27,12 @@
     text-decoration: none
 
     &.active
-      background-color: $color-secondary-1-2
-      color: white
+      background-color: $color-secondary-1-1
+      color: $color-primary-4
 
     &:hover:not(.active)
       background-color: $color-secondary-1-1
-      color: white
+      color: $color-primary-4
 
   .icon
     position: absolute
@@ -43,30 +43,32 @@
     a
       color: $color-secondary-1-1
 
-
-
-@media screen and (min-width:700px)
+@media only screen and (min-width:600px)
   .navbar
-    height: 50px
-    padding: 20px 0px
+    height: 75px
+    padding: 10px 0px
 
     .navbar-brand
       display: inline-block
-      font-size: 1.3em
+      font-size: 1em
 
     .navbar-nav
       display: inline-block
       position: absolute
       right: 10px
       width: auto
-      padding: 8px 0px
+      padding: 6px 0px
 
     li
       display: inline-block
 
     li a
       display: inline-block
-      padding: 8px 16px
+      padding: 6px 8px
 
     .icon
       display: none
+
+@media only screen and (min-width:900px)
+  .navbar
+    display: none

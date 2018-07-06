@@ -60,40 +60,37 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 3:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(4);
-module.exports = __webpack_require__(9);
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
 
 
 /***/ }),
-
-/***/ 4:
+/* 1 */
 /***/ (function(module, exports) {
 
 function toggleNavbar() {
-  var x = document.getElementById("myNavbar");
-  if (x.className == "") {
-    x.className += " responsive";
-    console.log("Hallo");
-  } else {
-    x.className = "";
-  }
+    var x = document.getElementById("myNavbar");
+    if (x.className === "navbar-nav") {
+        x.className += " toggleNavbar";
+        console.log("Added Classlist");
+    } else {
+        x.className = "navbar-nav";
+        console.log("Remove Classlist");
+    }
 }
 
 /***/ }),
-
-/***/ 9:
+/* 2 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);
